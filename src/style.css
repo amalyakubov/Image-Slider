@@ -142,16 +142,29 @@ body {
   display: flex;
   height: 360px;
   width: 640px;
-  border: 1px solid black;
   flex-direction: row;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
 }
 
+button {
+  height: 50px;
+  z-index: 4;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+#left {
+  margin-right: 40px;
+}
+
 #right {
   position: relative;
-  left: -2400px;
+  left: -2307px;
 }
 
 #header {
@@ -184,4 +197,8 @@ ol {
   margin-top: 50px;
   text-align: center;
   font-size: 24px;
+}
+
+img.hidden {
+  display: none;
 }
