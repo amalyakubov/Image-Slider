@@ -92,6 +92,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -106,17 +107,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -124,6 +129,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -139,13 +145,16 @@ body {
 }
 
 #container-div {
-  display: flex;
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+  grid-template-columns: 2vw 640px 2vw;
+  position: relative;
   height: 360px;
-  width: 640px;
+  min-width: 100%;
   flex-direction: row;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 button {
@@ -154,17 +163,9 @@ button {
 }
 
 .button-container {
+  z-index: 4;
   display: flex;
   align-items: center;
-}
-
-#left {
-  margin-right: 40px;
-}
-
-#right {
-  position: relative;
-  left: -2307px;
 }
 
 #header {
@@ -176,8 +177,11 @@ button {
 
 #picture-frame {
   display: flex;
-  flex-direction: row;
-  min-width: 3000px;
+  grid-column: 2;
+  z-index: -3;
+  gap: 60px;
+  flex-direction: column;
+  min-width: 100%;
   min-height: 300px;
   overflow: hidden;
 }
